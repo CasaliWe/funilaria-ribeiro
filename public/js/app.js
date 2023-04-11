@@ -24,21 +24,42 @@ function trocarCarousel(lado){
             controllerCarouselBannerInicial == 2 ? controllerCarouselBannerInicial = 1 : controllerCarouselBannerInicial = 2
             
             if(controllerCarouselBannerInicial == 1){
-                document.querySelector('._content2-carousel').style.cssText = `display: none;`
-                document.querySelector('._content1-carousel').style.cssText = `display: flex;`
+                document.querySelector('._content2-carousel').classList.add('d-none') 
+                document.querySelector('._content1-carousel').classList.remove('d-none')
+                document.querySelector('._content1-carousel').classList.add('animaTrocaCarousel')
             }else{
-                document.querySelector('._content2-carousel').style.cssText = `display: flex;`
-                document.querySelector('._content1-carousel').style.cssText = `display: none`
+                document.querySelector('._content2-carousel').classList.remove('d-none')
+                document.querySelector('._content2-carousel').classList.add('animaTrocaCarousel')
+                document.querySelector('._content1-carousel').classList.add('d-none')
             }
      }else{
         controllerCarouselBannerInicial == 1 ? controllerCarouselBannerInicial = 2 : controllerCarouselBannerInicial = 1
         
             if(controllerCarouselBannerInicial == 1){
-                document.querySelector('._content2-carousel').style.cssText = `display: none`
-                document.querySelector('._content1-carousel').style.cssText = `display: flex;`
+                document.querySelector('._content2-carousel').classList.remove('d-none')
+                document.querySelector('._content2-carousel').classList.add('animaTrocaCarousel')
+                document.querySelector('._content1-carousel').classList.add('d-none')
             }else{
-                document.querySelector('._content2-carousel').style.cssText = `display: flex`
-                document.querySelector('._content1-carousel').style.cssText = `display: none`
+                document.querySelector('._content2-carousel').classList.add('d-none')
+                document.querySelector('._content1-carousel').classList.remove('d-none')
+                document.querySelector('._content1-carousel').classList.add('animaTrocaCarousel')
             }
      }
+}
+
+
+
+//MASCARA INPUT TEL
+document.getElementById('tel-form').addEventListener('keyup', (e)=>{
+    let input = e.target
+    input.value = phoneMask(input.value)
+})
+
+
+const phoneMask = (value) => {
+    if (!value) return ""
+    value = value.replace(/\D/g,'')
+    value = value.replace(/(\d{2})(\d)/,"($1) $2")
+    value = value.replace(/(\d)(\d{4})$/,"$1-$2")
+    return value
 }
