@@ -8,8 +8,39 @@
 }
 
 body{
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
+
+
+
+
+
+/*BTN WPP*/
+#btn-wpp{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 10000;
+    width: 70px;
+    height: 70px;
+    animation:animaBtnWpp 1s infinite;
+}
+
+@media(max-width:992px){
+    #btn-wpp{
+        bottom: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+
+@keyframes animaBtnWpp{
+    from{transform: scale(1.0);}
+    to{transform: scale(1.1);}
+}
+/*BTN WPP*/
 
 
 
@@ -584,7 +615,16 @@ body{
     font-weight: 600;
     color: #000000be;
     text-align: center;
+    font-size: 30px;
+}
+
+._subtitle-sobre-nos{
+    font-weight: 500;
+    color: #000000be;
+    text-align: center;
     margin-bottom: 50px;
+    margin-top: -5px;
+    font-size: 18px;
 }
 
 ._img-git-sobre-nos{
@@ -678,7 +718,15 @@ body{
 ._nossos-servicos{
     text-align: center;
     color: rgba(255, 255, 255, 0.76);
+    font-size: 30px;
+}
+
+._subnossos-servicos{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.76);
     margin-bottom: 50px;
+    font-size: 18px;
+    margin-top: -5px;
 }
 
 ._container-exibir-servicos{
@@ -793,6 +841,14 @@ body{
 ._galeria-title{
     text-align: center;
     color: rgba(255, 255, 255, 0.76);
+    font-size: 30px;
+}
+
+._subgaleria-title{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 18px;
+    margin-top: -5px;
     margin-bottom: 50px;
 }
 
@@ -821,8 +877,8 @@ body{
     background-color: transparent;
     color: white;
     border: 2px solid white;
-    font-size: 25px;
-    padding: 10px 40px;
+    font-size: 18px;
+    padding: 6px 40px;
     border-radius: 5px;
     transition: all 500ms;
 } 
@@ -832,7 +888,7 @@ body{
 }
 
 #galeria button img{
-    width: 30px;
+    width: 22px;
 } 
 
 
@@ -864,6 +920,100 @@ body{
      background-size: cover;
      background-repeat: no-repeat;
 }
+
+
+._title-funcionamento{
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+._funcionamento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+._funcionamento p{
+    margin-top: -10px;
+}
+
+
+
+
+
+
+._endereco{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+._endereco p{
+    margin-top: -10px;
+}
+
+._endereco button{
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 5px 20px;
+    margin-top: 20px;
+    transition: all 500ms;
+}
+
+._endereco button:hover{
+    background-color: rgba(255, 255, 255, 0.322);
+}
+
+
+
+
+
+
+
+._btn-sociais{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+._btn-sociais a{
+     text-decoration: none;
+     border: 2px solid white;
+     color: white;
+     padding: 5px 20px;
+     width: 200px;
+     margin-bottom: 10px;
+     transition: all 500ms;
+}
+
+._btn-sociais a:hover{
+    background-color: rgba(255, 255, 255, 0.288);
+}
+
+._btn-sociais a img{
+     width: 18px;
+}
+
+
+
+@media(max-width:992px){
+    ._container-funcionamento-blocos{
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.795);
+        width: 85%;
+        margin: 20px auto;
+    }
+
+    ._container-funcionamento-blocos:nth-child(3){
+        border-bottom: none !important;
+        margin-bottom: 0 !important;
+    }
+}
 /*FUNCIONAMENTO*/
 
 
@@ -887,6 +1037,15 @@ body{
     font-weight: 600;
     color: #000000be;
     text-align: center;
+    font-size: 30px;
+}
+
+._subtitle-instagram{
+    font-weight: 600;
+    color: #000000be;
+    text-align: center;
+    font-size: 18px;
+    margin-top: -5px;
     margin-bottom: 50px;
 }
 
@@ -913,7 +1072,6 @@ body{
 @media(max-width:1200px){
     ._title-instagram{
         font-size: 25px;
-        margin-bottom: 40px;
     }
 
     #instagram button{
@@ -946,7 +1104,15 @@ body{
 ._title-formulario{
     text-align: center;
     color: rgba(255, 255, 255, 0.76);
+    font-size: 30px;
+}
+
+._subtitle-formulario{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.76);
     margin-bottom: 50px;
+    font-size: 18px;
+    margin-top: -5px;
 }
 
 #formulario form{
@@ -962,7 +1128,7 @@ body{
     background-color: rgba(255, 255, 255, 0.473);
     padding: 15px;
     border: none;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 #formulario form input::placeholder,#formulario form textarea::placeholder {
@@ -975,9 +1141,9 @@ body{
     color: white;
     border: none;
     border: 2px solid white;
+    font-size: 18px;
+    padding: 6px 40px;
     border-radius: 5px;
-    padding: 10px 60px;
-    font-size: 25px;
     transition: all 500ms;
 }
 
@@ -986,7 +1152,7 @@ body{
 }
 
 #formulario form button img{
-    width: 30px;
+    width: 22px;
 }
 
 
@@ -994,19 +1160,19 @@ body{
 
 @media(max-width:1400px){
     #formulario form input,#formulario form textarea {
-        width: 80%;
-        padding: 10px;
-        margin-bottom: 20px;
+        width: 75%;
+        padding: 7px;
+        margin-bottom: 15px;
     }
     
     #formulario form input::placeholder,#formulario form textarea::placeholder {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     #formulario form button{
         border-radius: 5px;
-        padding: 8px 50px;
-        font-size: 22px;
+        padding: 6px 40px;
+        font-size: 18px;
     }
     
     #formulario form button img{

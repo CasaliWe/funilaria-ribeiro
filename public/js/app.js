@@ -7,11 +7,13 @@ function abrirMenu(){
         menuMobile = false
         document.querySelector('.bars-toggler').style.cssText = 'display:none'
         document.querySelector('.close-toggler').style.cssText = 'display:block'
+        document.querySelector('body').style.cssText = `position: fixed;`
     }else {
         document.querySelector('#nav-mobile').style.cssText = 'width:0%'
         menuMobile = true
         document.querySelector('.bars-toggler').style.cssText = 'display:block'
         document.querySelector('.close-toggler').style.cssText = 'display:none'
+        document.querySelector('body').style.cssText = `position: inherit;`
     }
 }
 

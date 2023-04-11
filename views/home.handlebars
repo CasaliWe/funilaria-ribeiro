@@ -1,9 +1,16 @@
+<!--BTN WPP FLOAT-->
+<div id="btn-wpp">
+    <a href=""><img src="img/wpp-float.png" class="img-fluid" alt="WHATSAPP ICON"></a>
+</div>
+<!--BTN WPP FLOAT-->
+
+
 <!--NAV MOBILE-->
 <div id="nav-mobile">
         <div id="links-nav-mobile">
-            <a onclick="abrirMenu()" href="#">SOBRE</a>
-            <a onclick="abrirMenu()" href="#" class="division-links">SERVIÇOS</a>
-            <a onclick="abrirMenu()" href="#">CONTATO</a>
+            <a onclick="abrirMenu()" href="#sobre-nos">SOBRE</a>
+            <a onclick="abrirMenu()" href="#servicos" class="division-links">SERVIÇOS</a>
+            <a onclick="abrirMenu()" href="#formulario">CONTATO</a>
         </div>
 
         <div id="icons-nav-mobile">
@@ -32,9 +39,9 @@
                 <img src="../img/logo.png" alt="Logo Funilaria Ribeiro">
             
                 <nav>
-                    <a href="#">SOBRE</a>
-                    <a href="#" class="division-links">SERVIÇOS</a>
-                    <a href="#">CONTATO</a>
+                    <a href="#sobre-nos">SOBRE</a>
+                    <a href="#servicos" class="division-links">SERVIÇOS</a>
+                    <a href="#formulario">CONTATO</a>
                 </nav>
 
                 <button onclick="abrirMenu()"><img src="../img/bars.png" class="bars-toggler"> <img src="../img/close.png" class="close-toggler"></button>
@@ -70,11 +77,11 @@
 
                   <p>Oferecemos soluções eficazes para residências e construções, incluindo instalação, manutenção e reparo de calhas, algerozes e colarinhos.</p>
 
-                  <button><img src="img/info.png"> SAIBA MAIS</button>
+                  <button onclick="window.location.href='#sobre-nos'"><img src="img/info.png"> SAIBA MAIS</button>
               </div>
         </div>
 
-        <img id="arrow-down" src="img/arrow-down.png">
+        <img onclick="window.location.href='#sobre-nos'" id="arrow-down" src="img/arrow-down.png">
 
      </div>
 </section>
@@ -86,20 +93,21 @@
 <!--SOBRE NÓS-->
 <section id="sobre-nos">
 
-      <h1 class="_title-sobre-nos">SOBRE NÓS</h1>
+      <h1 data-aos="fade-up" data-aos-once="true" class="_title-sobre-nos">SOBRE NÓS</h1>
+      <h6 data-aos="fade-up" data-aos-once="true" class="_subtitle-sobre-nos">Conheça um pouco sobre a funilaria!</h6>
 
       <div class="container">
            <div class="row">
-                <div class="order-2 order-lg-1 col-12 col-lg-6 d-flex justify-content-center align-items-center">
+                <div data-aos="fade-up" data-aos-once="true" class="order-2 order-lg-1 col-12 col-lg-6 d-flex justify-content-center align-items-center">
                     <img class="_img-git-sobre-nos" src="img/gif1.gif">
                 </div>
 
-                <div class="order-1 order-lg-2 col-12 col-lg-6 _container-txt-sobre-nos">
+                <div data-aos="fade-up" data-aos-once="true" class="order-1 order-lg-2 col-12 col-lg-6 _container-txt-sobre-nos">
                      <h1>FUNILARIA RIBEIRO</h1>
 
                      <p>A Funilaria Ribeiro é uma empresa especializada na colocação de calhas e algerosas, com mais de 20 anos de experiência no mercado. Com técnicas aperfeiçoadas e profissionais qualificados, a empresa oferece serviços de alta qualidade e segurança, visando sempre o melhor resultado para seus clientes.</p>
 
-                     <button>SAIBA MAIS</button>
+                     <button onclick="window.location.href='#galeria'">SAIBA MAIS</button>
                 </div>
            </div>
       </div>
@@ -112,12 +120,13 @@
 <!--SERVIÇOS-->
 <section id="servicos">
 
-    <h1 class="_nossos-servicos">NOSSOS SERVIÇOS</h1>
+    <h1 data-aos="fade-up" data-aos-once="true" class="_nossos-servicos">NOSSOS SERVIÇOS</h1>
+    <h6 data-aos="fade-up" data-aos-once="true" class="_subnossos-servicos">Alguns dos serviços que podemos lhe oferecer!</h6>
 
     <div class="container">
         <div class="row">
 
-            <div class="col-12 col-lg-4 px-3 text-center mb-4">
+            <div data-aos="fade-up" data-aos-once="true" class="col-12 col-lg-4 px-3 text-center mb-4">
                 <div class="_container-exibir-servicos">
                      <div><img src="img/fundo.jpeg"></div>
 
@@ -130,7 +139,7 @@
             </div>
 
 
-            <div class="col-12 col-lg-4 px-3 text-center mb-4">
+            <div data-aos="fade-up" data-aos-once="true" class="col-12 col-lg-4 px-3 text-center mb-4">
                 <div class="_container-exibir-servicos">
                      <div><img src="img/img2.png"></div>
 
@@ -143,7 +152,7 @@
             </div>
 
 
-            <div class="col-12 col-lg-4 px-3 text-center mb-4">
+            <div data-aos="fade-up" data-aos-once="true" class="col-12 col-lg-4 px-3 text-center mb-4">
                 <div class="_container-exibir-servicos">
                      <div><img src="img/alge.png"></div>
 
@@ -176,20 +185,21 @@
 
 <!--GALERIA-->
 <section id="galeria">
-    <h1 class="_galeria-title">GALERIA</h1>
+    <h1 data-aos="fade-up" data-aos-once="true" class="_galeria-title">GALERIA</h1>
+    <h6 data-aos="fade-up" data-aos-once="true" class="_subgaleria-title">Veja alguns de nossos trabalhos finalizados!</h6>
 
     <div class="container mb-5">
         <div class="row _container-all-imgs">
-            <div class="col-12 col-lg-4 p-2 mb-3 _container-galeria-fotos"><img src="img/gif1.gif"></div>
-            <div class="col-12 col-lg-4 p-2 mb-3 _container-galeria-fotos"><img src="img/flex-img5.gif"></div>
-            <div class="col-12 col-lg-4 p-2 mb-3 _container-galeria-fotos"><img src="img/flex-img6.gif"></div>
-            <div class="col-12 col-lg-4 p-2 mb-3 _container-galeria-fotos"><img src="img/flex-img1.jpeg"></div>
-            <div class="col-12 col-lg-4 p-2 mb-3 _container-galeria-fotos"><img src="img/flex-img3.jpeg"></div>
-            <div class="col-12 col-lg-4 p-2 mb-3 _container-galeria-fotos"><img src="img/img2.png"></div>
+            <div data-aos="fade-up" data-aos-once="true" class="col-12 col-lg-4 p-2 mb-3 _container-galeria-fotos"><img src="img/gif1.gif"></div>
+            <div data-aos="fade-up" data-aos-once="true" class="col-12 col-lg-4 p-2 mb-3 _container-galeria-fotos"><img src="img/flex-img5.gif"></div>
+            <div data-aos="fade-up" data-aos-once="true" class="col-12 col-lg-4 p-2 mb-3 _container-galeria-fotos"><img src="img/flex-img6.gif"></div>
+            <div data-aos="fade-up" data-aos-once="true" class="col-12 col-lg-4 p-2 mb-3 _container-galeria-fotos"><img src="img/flex-img1.jpeg"></div>
+            <div data-aos="fade-up" data-aos-once="true" class="col-12 col-lg-4 p-2 mb-3 _container-galeria-fotos"><img src="img/flex-img3.jpeg"></div>
+            <div data-aos="fade-up" data-aos-once="true" class="col-12 col-lg-4 p-2 mb-3 _container-galeria-fotos"><img src="img/img2.png"></div>
         </div>
     </div>
 
-    <button><img src="img/wpp.png"> ORÇAMENTOS</button>
+    <button data-aos="fade-up" data-aos-once="true"><img src="img/wpp.png"> ORÇAMENTOS</button>
 </section>
 <!--GALERIA-->
 
@@ -198,7 +208,49 @@
 
 <!--FUNCRIONAMENTO-->
 <section id="funcionamento">
+   <div class="container">
+    <div class="row">
 
+        <div data-aos="fade-up" data-aos-once="true" class="_container-funcionamento-blocos col-12 col-lg-4 text-center text-white">
+            <h3 class="_title-funcionamento">FUNCIONAMENTO:</h3>
+
+            <div class="_funcionamento">
+                <p>Seg: 08:30 - 17:30</p>
+                <p>Ter: 08:30 - 17:30</p>
+                <p>Qua: 08:30 - 17:30</p>
+                <p>Qui: 08:30 - 17:30</p>
+                <p>Sex: 08:30 - 17:30</p>
+                <p>Sáb: Fechado</p>
+                <p>Dom/Feriado: Fechado</p>
+            </div>
+        </div>
+        
+        <div data-aos="fade-up" data-aos-once="true" class="_container-funcionamento-blocos col-12 col-lg-4 text-center text-white">
+            <h3 class="_title-funcionamento">ENDEREÇO:</h3>
+
+            <div class="_endereco">
+                <p>Av. Rio Grande, 101</p>
+                <p>Valinhos</p>
+                <p>99042-000</p>
+                <p>Passo Fundo - RS</p>
+
+                 <button onclick="window.location.href='https://goo.gl/maps/8LXqYk3c5QX2SJ787'">VER NO MAPA</button>
+            </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-once="true" class="_container-funcionamento-blocos col-12 col-lg-4 text-center text-white">
+            <h3 class="_title-funcionamento">CONTATOS:</h3>
+            
+            <div class="_btn-sociais">
+                <a href="" target="_blank"><img src="img/insta.png"> INSTAGRAM</a>
+                <a href="" target="_blank"><img src="img/face.png"> FACEBOOK</a>
+                <a href="" target="_blank"><img src="img/wpp.png"> WHATSAPP</a>
+                <a href="" target="_blank"><img src="img/email.png"> EMAIL</a>
+            </div>
+        </div>
+
+    </div>
+   </div>
 </section>
 <!--FUNCRIONAMENTO-->
 
@@ -210,12 +262,13 @@
 <!--INSTAGRAM-->
 <section id="instagram">
 
-     <h1 class="_title-instagram">CONHEÇA NOSSO INSTAGRAM</h1>
+     <h1 data-aos="fade-up" data-aos-once="true" class="_title-instagram">NOSSO INSTAGRAM</h1>
+     <h6 data-aos="fade-up" data-aos-once="true" class="_subtitle-instagram">Conheça nossa rede social!</h6>
 
-     <iframe class="d-none d-lg-block" src="https://snapwidget.com/embed/1030395" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:765px; height:510px; margin-bottom:25px;"></iframe>
-     <iframe class="d-block d-lg-none" src="https://snapwidget.com/embed/1030393" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:315px; height:315px; margin-bottom:25px;"></iframe>
+     <iframe data-aos="fade-up" data-aos-once="true" class="d-none d-lg-block" src="https://snapwidget.com/embed/1030395" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:765px; height:510px; margin-bottom:25px;"></iframe>
+     <iframe data-aos="fade-up" data-aos-once="true" class="d-block d-lg-none" src="https://snapwidget.com/embed/1030393" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:315px; height:315px; margin-bottom:25px;"></iframe>
 
-     <button>@FUNILARIA_RIBEIRO2022 <img src="img/insta.png"></button>
+     <button data-aos="fade-up" data-aos-once="true">@FUNILARIA_RIBEIRO2022 <img src="img/insta.png"></button>
 
 </section>
 <!--INSTAGRAM-->
@@ -227,15 +280,16 @@
 <!--FORMULARIO-->
 <section id="formulario">
     
-    <h1 class="_title-formulario">CONTATO</h1>
+    <h1 data-aos="fade-up" data-aos-once="true" class="_title-formulario">CONTATO</h1>
+    <h6 data-aos="fade-up" data-aos-once="true" class="_subtitle-formulario">Preencha seus dados e entraremos em contato!</h6>
 
     <form action="">
-        <input type="text" placeholder="NOME*" required name="nome">
-        <input type="email" placeholder="EMAIL*" required name="email">
-        <input id="tel-form" type="tel" placeholder="WHATSAPP*" required name="whatsapp" maxlength="15" inputmode="tel">
-        <textarea name="mensagem" rows="5" required placeholder="MENSAGEM*"></textarea>
+        <input data-aos="fade-up" data-aos-once="true" type="text" placeholder="NOME*" required name="nome">
+        <input data-aos="fade-up" data-aos-once="true" type="email" placeholder="EMAIL*" required name="email">
+        <input data-aos="fade-up" data-aos-once="true" id="tel-form" type="tel" placeholder="WHATSAPP*" required name="whatsapp" maxlength="15" inputmode="tel">
+        <textarea data-aos="fade-up" data-aos-once="true" name="mensagem" rows="5" required placeholder="MENSAGEM*"></textarea>
 
-        <button type="submit"><img src="img/enviar.png"> ENVIAR</button>
+        <button data-aos="fade-up" data-aos-once="true" type="submit"><img src="img/enviar.png"> ENVIAR</button>
     </form>
 
 </section>
