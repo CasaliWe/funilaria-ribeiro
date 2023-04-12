@@ -45,3 +45,10 @@ function abrirMenuMobile(){
         menuMobile = true
      }
 }
+
+
+
+//VERIFICAR SE INSERIU A IMG E ATIVAR O BTN
+function checkEntradaImg(){
+    document.getElementById("btn-submit-add-img-sobre-nos").disabled = false
+}

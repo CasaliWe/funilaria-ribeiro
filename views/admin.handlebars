@@ -12,10 +12,9 @@
 
         <div id="menu-btns-mobile">         
                 <!--btns menu MOBILE (replicar o btn e incrementar o número dele no ID e ONCLICK)-->
-                <button id="btn-mobile1" onclick="trocarAba('1'), abrirMenuMobile()" class="_btn-menu-mobile active-btn">Conteúdo 1</button>
-                <button id="btn-mobile2" onclick="trocarAba('2'), abrirMenuMobile()" class="_btn-menu-mobile">Conteúdo 2</button>
-                <button id="btn-mobile3" onclick="trocarAba('3'), abrirMenuMobile()" class="_btn-menu-mobile">Conteúdo 3</button>
-                <button id="btn-mobile4" onclick="trocarAba('4'), abrirMenuMobile()" class="_btn-menu-mobile">Conteúdo 4</button>
+                <button id="btn-mobile1" onclick="trocarAba('1'), abrirMenuMobile()" class="_btn-menu-mobile active-btn">Informações</button>
+                <button id="btn-mobile2" onclick="trocarAba('2'), abrirMenuMobile()" class="_btn-menu-mobile">Serviços</button>
+                <button id="btn-mobile3" onclick="trocarAba('3'), abrirMenuMobile()" class="_btn-menu-mobile">Galeria</button>
                 <!--btns menu-->
 
                 <h6>ADMINISTRADOR</h6>
@@ -33,10 +32,9 @@
             <img src="img/logo.png" alt="logo">
              
             <!--btns menu (replicar o btn e incrementar o número dele no ID e ONCLICK)-->
-            <button id="btn1" onclick="trocarAba('1')" class="_btn-menu active-btn">Conteúdo 1</button>
-            <button id="btn2" onclick="trocarAba('2')" class="_btn-menu">Conteúdo 2</button>
-            <button id="btn3" onclick="trocarAba('3')" class="_btn-menu">Conteúdo 3</button>
-            <button id="btn4" onclick="trocarAba('4')" class="_btn-menu">Conteúdo 4</button>
+            <button id="btn1" onclick="trocarAba('1')" class="_btn-menu active-btn">Informações</button>
+            <button id="btn2" onclick="trocarAba('2')" class="_btn-menu">Serviços</button>
+            <button id="btn3" onclick="trocarAba('3')" class="_btn-menu">Galeria</button>
             <!--btns menu-->
 
             <h6>ADMINISTRADOR</h6>
@@ -49,23 +47,75 @@
 
 
         
-        <!--conteúdo principal (colocar o id com o número correspondente ao BTN)-->
+        <!--conteúdo principal-->
         <div class="_conteudo-principal col-12 col-lg-10">
 
             <div id="conteudo1" class="_conteudo">
-                <h2 class="text-secondary mb-5">CONTEÚDO 1</h2>                   
+                <h2 class="text-secondary mb-5">Informações</h2>        
+
+
+                <div class="shadow-lg p-3">
+
+                    <form action="/salvarInfosAdm" method="post">
+
+                        <div class="text-secondary mb-4">
+                             <h5 class="fw-bold mb-2">REDES SOCIAIS</h5>
+                             <div class="row">
+                                <div class="col-6">
+                                    <label class="w-100">Instagram <br> <input type="text" name="instagram" required value="" class="form-control"></label>
+                                </div>
+                                <div class="col-6">
+                                    <label class="w-100">Facebook <br> <input type="text" name="facebook" required value="" class="form-control"></label>
+                                </div>
+                             </div>
+                        </div>
+
+                        <div class="text-secondary mb-4">
+                            <h5 class="fw-bold mb-2">CONTATO</h5>
+                            <div class="row">
+                                <div class="col-6">
+                                    <label class="w-100">Whatsapp <br> <input type="tel" inputmode="tel" name="whatsapp" required value="" class="form-control"></label>
+                                </div>
+                                <div class="col-6">
+                                    <label class="w-100">Email <br> <input type="text" name="email" required value="" class="form-control"></label>
+                                </div>
+                             </div>
+                        </div>
+
+                        <div class="text-secondary mb-4">
+                            <h5 class="fw-bold mb-2">SOBRE</h5>
+                            <div class="row">
+                                <div class="col-12">
+                                    <label>Quem somos</label>
+                                    <textarea class="form-control" name="txt_sobre_nos" required rows="3" value="oi"></textarea>
+                                </div>
+                             </div>
+                             <div class="row mt-2">
+                                 <div class="col-12">
+                                     <button type="button" class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#modalAddImgSobreNos">Adicionar imagem +</button>
+                                 </div>
+                             </div>
+                        </div>
+
+                        <div class="mt-5 d-flex justify-content-start align-items-center">
+                            <button type="submit" class="btn btn-primary">SALVAR</button>
+                        </div>
+
+                    </form>
+
+                </div>           
             </div>
+
+
 
             <div id="conteudo2" class="_conteudo d-none">
-                <h2 class="text-secondary mb-5">CONTEÚDO 2</h2>
+                <h2 class="text-secondary mb-5">Serviços</h2>
             </div>
+
+
 
             <div id="conteudo3" class="_conteudo d-none">
-                <h2 class="text-secondary mb-5">CONTEÚDO 3</h2>
-            </div>
-
-            <div id="conteudo4" class="_conteudo d-none">
-                <h2 class="text-secondary mb-5">CONTEÚDO 4</h2>
+                <h2 class="text-secondary mb-5">Galeria</h2>
             </div>
 
         </div>
@@ -74,3 +124,46 @@
     </div>
 </main>
 <!--CONTAINER-->
+
+
+
+
+
+
+
+
+
+
+
+<!--*************************MODAIS*******************************-->
+
+<!-- Modal add img sobre nos -->
+<div class="modal fade" id="modalAddImgSobreNos" tabindex="-1" aria-labelledby="modalAddImgSobreNos" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5">Adicionar imagem</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+
+
+      <form action="/addImgSobreNos" method="POST" enctype="multipart/form-data">
+          <div class="modal-body">
+             <input oninput="checkEntradaImg()" type="file" name="file">
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" disabled id="btn-submit-add-img-sobre-nos">Save changes</button>
+          </div>
+      </form>
+
+
+
+    </div>
+  </div>
+</div>
+<!-- Modal add img sobre nos -->
+
+<!--*************************MODAIS*******************************-->

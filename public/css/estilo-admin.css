@@ -152,7 +152,7 @@
 
 
 
-/*CONTEÚDO*/
+/*CONTEÚDO CONTAINER*/
 ._conteudo-principal{
     padding: 50px;
     height: 100vh;
@@ -164,4 +164,15 @@
         padding: 50px 10px;
     }
 }
-/*CONTEÚDO*/
+/*CONTEÚDO CONTAINER*/
+
+
+
+
+
+
+/*INFORMAÇÕES ADM*/
+#redes-sociais-adm{
+    width: 100%;
+}
+/*INFORMAÇÕES ADM*/

@@ -4,6 +4,9 @@ const { Cookie } = require('express-session')
 const session = require('express-session')
 const FileStore = require('session-file-store')(session)
 
+const multer = require('multer')
+const path = require('path')
+
 const flash = require('express-flash')
 
 const conn = require('./db/conn')
@@ -11,6 +14,8 @@ const conn = require('./db/conn')
 const funilariaRoutes = require('./routes/funilaria')
 
 const dbFunilaria = require('./models/dbFunilaria')
+const dbGaleria = require('./models/dbGaleria')
+const dbServicos = require('./models/dbServicos')
 
 const app = express()
 
