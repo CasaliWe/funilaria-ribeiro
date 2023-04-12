@@ -6,4 +6,8 @@ module.exports = class PostsControllers {
               res.render('home')
         }
 
+        static showAdmin(req,res){
+              res.render('admin')
+        }
+
 }

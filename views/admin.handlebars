@@ -1,0 +1,76 @@
+<!--CONTAINER-->
+<main class="container-fluid">
+    <div class="row">
+
+        <!--Menu superior somente no mobile-->
+        <div class="_menu-mobile col-12 d-flex d-lg-none">
+            <img class="_logo-mobile" src="img/logo.png" alt="logo">
+
+            <img onclick="abrirMenuMobile()" class="_toggler" src="img/bars.png">
+        </div>
+
+
+        <div id="menu-btns-mobile">         
+                <!--btns menu MOBILE (replicar o btn e incrementar o número dele no ID e ONCLICK)-->
+                <button id="btn-mobile1" onclick="trocarAba('1'), abrirMenuMobile()" class="_btn-menu-mobile active-btn">Conteúdo 1</button>
+                <button id="btn-mobile2" onclick="trocarAba('2'), abrirMenuMobile()" class="_btn-menu-mobile">Conteúdo 2</button>
+                <button id="btn-mobile3" onclick="trocarAba('3'), abrirMenuMobile()" class="_btn-menu-mobile">Conteúdo 3</button>
+                <button id="btn-mobile4" onclick="trocarAba('4'), abrirMenuMobile()" class="_btn-menu-mobile">Conteúdo 4</button>
+                <!--btns menu-->
+
+                <h6>ADMINISTRADOR</h6>
+                <h4>WESLEI CASALI</h4>
+
+
+                <a href="">SAIR</a>
+        </div>
+        <!--Menu superior somente no mobile-->
+
+
+         
+        <!--Menu latera apenas desktop-->
+        <div class="_menu-desktop d-none d-lg-flex col-lg-2">
+            <img src="img/logo.png" alt="logo">
+             
+            <!--btns menu (replicar o btn e incrementar o número dele no ID e ONCLICK)-->
+            <button id="btn1" onclick="trocarAba('1')" class="_btn-menu active-btn">Conteúdo 1</button>
+            <button id="btn2" onclick="trocarAba('2')" class="_btn-menu">Conteúdo 2</button>
+            <button id="btn3" onclick="trocarAba('3')" class="_btn-menu">Conteúdo 3</button>
+            <button id="btn4" onclick="trocarAba('4')" class="_btn-menu">Conteúdo 4</button>
+            <!--btns menu-->
+
+            <h6>ADMINISTRADOR</h6>
+            <h4>WESLEI CASALI</h4>
+
+
+            <a href="">SAIR</a>
+        </div>
+        <!--Menu latera apenas desktop-->
+
+
+        
+        <!--conteúdo principal (colocar o id com o número correspondente ao BTN)-->
+        <div class="_conteudo-principal col-12 col-lg-10">
+
+            <div id="conteudo1" class="_conteudo">
+                <h2 class="text-secondary mb-5">CONTEÚDO 1</h2>                   
+            </div>
+
+            <div id="conteudo2" class="_conteudo d-none">
+                <h2 class="text-secondary mb-5">CONTEÚDO 2</h2>
+            </div>
+
+            <div id="conteudo3" class="_conteudo d-none">
+                <h2 class="text-secondary mb-5">CONTEÚDO 3</h2>
+            </div>
+
+            <div id="conteudo4" class="_conteudo d-none">
+                <h2 class="text-secondary mb-5">CONTEÚDO 4</h2>
+            </div>
+
+        </div>
+        <!--conteúdo principal-->
+
+    </div>
+</main>
+<!--CONTAINER-->

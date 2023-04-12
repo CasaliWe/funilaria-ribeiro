@@ -7,4 +7,6 @@ const funilariaControllers = require('../controllers/Funilaria')
 
 router.get('/', funilariaControllers.showHome)
 
+router.get('/admin', funilariaControllers.showAdmin)
+
 module.exports = router
