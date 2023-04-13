@@ -126,7 +126,6 @@
 
 
 {{#if servicos}}
-{{#each servicos}}
 <!--SERVIÇOS-->
 <section id="servicos">
 
@@ -136,6 +135,7 @@
     <div class="container">
         <div class="row">
 
+            {{#each servicos}}
             <div data-aos="fade-up" data-aos-once="true" class="col-12 col-lg-4 px-3 text-center mb-4">
                 <div class="_container-exibir-servicos">
                      <div><img src="img/{{this.img_servicos}}"></div>
@@ -147,11 +147,11 @@
                      <button onclick="window.location.href='#formulario'">ORÇAMENTO</button>
                 </div>
             </div>
+            {{/each}}
 
     </div>
 </section>
 <!--SERVIÇOS-->
-{{/each}}
 {{/if}}
 
 
@@ -167,7 +167,6 @@
 
 
 {{#if galeria}}
-{{#each galeria}}
 <!--GALERIA-->
 <section id="galeria">
     <h1 data-aos="fade-up" data-aos-once="true" class="_galeria-title">GALERIA</h1>
@@ -175,14 +174,17 @@
 
     <div class="container mb-5">
         <div class="row _container-all-imgs">
+            {{#each galeria}}
             <div data-aos="fade-up" data-aos-once="true" class="col-12 col-lg-4 p-2 mb-3 _container-galeria-fotos"><img src="img/{{this.imgs_name}}"></div>
+            {{/each}}
         </div>
     </div>
-
-    <button data-aos="fade-up" data-aos-once="true"><img src="img/wpp.png"> ORÇAMENTOS</button>
+    
+    {{#each infos}}
+    <button data-aos="fade-up" data-aos-once="true" onclick="window.location.href='https://wa.me/+55{{this.whatsapp}}'"><img src="img/wpp.png"> ORÇAMENTOS</button>
+    {{/each}}
 </section>
 <!--GALERIA-->
-{{/each}}
 {{/if}}
 
 

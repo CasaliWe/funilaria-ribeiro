@@ -24,7 +24,7 @@ const dbFunilaria = db.define('infos', {
           required: true
      },
      txt_sobre_nos: {
-          type: DataTypes.STRING,
+          type: DataTypes.TEXT,
           required: true
      },
 })

@@ -32,8 +32,7 @@ app.use(
           }),
           cookie: {
                secure:false,
-               maxAge: 360000, //TEMPO DE VALIDADE
-               expires: new Date(Date.now()+360000), //TEMPO DE VALIDADE
+               expires: new Date(Date.now() + (365 * 24 * 60 * 60 * 1000)),
                httpOnly: true
           }
     })
