@@ -38,10 +38,12 @@ function abrirMenuMobile(){
      if(menuMobile){
         document.getElementById('menu-btns-mobile').style.display = 'block'
         document.getElementById('menu-btns-mobile').classList.add('animaMenuMobile')
+        document.getElementById("btn-toggler-mobile").src = 'img/close2.png'
         menuMobile = false
      }else{
         document.getElementById('menu-btns-mobile').style.display = 'none'
         document.getElementById('menu-btns-mobile').classList.remove('animaMenuMobile')
+        document.getElementById("btn-toggler-mobile").src = 'img/bars.png'
         menuMobile = true
      }
 }
