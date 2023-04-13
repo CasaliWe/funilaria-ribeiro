@@ -176,3 +176,20 @@
     width: 100%;
 }
 /*INFORMAÇÕES ADM*/
+
+
+
+/*SERVIÇOS ADM*/
+._icons-acoes-servicos:hover{
+    filter: invert(10%);
+    transition: all 500ms;
+}
+
+
+@media(max-width:1200px){
+    #tabela-servicos{
+        overflow-x: auto !important;
+        width: 800px !important;
+    }
+}
+/*SERVIÇOS ADM*/

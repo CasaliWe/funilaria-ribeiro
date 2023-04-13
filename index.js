@@ -3,6 +3,7 @@ const exphbs = require('express-handlebars')
 const { Cookie } = require('express-session')
 const session = require('express-session')
 const FileStore = require('session-file-store')(session)
+const nodemailer = require('nodemailer')
 
 const multer = require('multer')
 const path = require('path')

@@ -52,3 +52,14 @@ function abrirMenuMobile(){
 function checkEntradaImg(){
     document.getElementById("btn-submit-add-img-sobre-nos").disabled = false
 }
+
+
+//VERIFICAR SE INSERIU A IMG E ATIVAR O BTN
+function checkEntradaImgService(){
+    document.getElementById("btn-submit-add-img-service").disabled = false
+}
+
+//VERIFICAR SE INSERIU A IMG E ATIVAR O BTN
+function checkEntradaImgGaleria(){
+    document.getElementById("btn-submit-add-img-galeria").disabled = false
+}

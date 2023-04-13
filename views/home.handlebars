@@ -1,8 +1,10 @@
+{{#each infos}}
 <!--BTN WPP FLOAT-->
 <div id="btn-wpp">
-    <a href=""><img src="img/wpp-float.png" class="img-fluid" alt="WHATSAPP ICON"></a>
+    <a href="https://wa.me/+55{{this.whatsapp}}"><img src="img/wpp-float.png" class="img-fluid" alt="WHATSAPP ICON"></a>
 </div>
 <!--BTN WPP FLOAT-->
+{{/each}}
 
 
 <!--NAV MOBILE-->
@@ -12,12 +14,14 @@
             <a onclick="abrirMenu()" href="#servicos" class="division-links">SERVIÇOS</a>
             <a onclick="abrirMenu()" href="#formulario">CONTATO</a>
         </div>
-
+        
+        {{#each infos}}
         <div id="icons-nav-mobile">
-            <a href="#" target="_blank"><img src="../img/face.png" alt="icon facebook"></a>
-            <a href="#" target="_blank"><img src="../img/insta.png" alt="icon instagram"></a>
-            <a href="#" target="_blank"><img src="../img/wpp.png" alt="icon whatsapp"></a>
+            <a href="{{this.facebook}}" target="_blank"><img src="../img/face.png" alt="icon facebook"></a>
+            <a href="{{this.instagram}}" target="_blank"><img src="../img/insta.png" alt="icon instagram"></a>
+            <a href="https://wa.me/+55{{this.whatsapp}}" target="_blank"><img src="../img/wpp.png" alt="icon whatsapp"></a>
         </div>
+        {{/each}}
 </div>
 <!--NAV MOBILE-->
 
@@ -28,12 +32,14 @@
      <div id="filtro-banner">
 
         <div id="container-topo">
-
+            
+            {{#each infos}}
             <div id="icones-sociais">
-                 <a href="#" target="_blank"><img src="../img/face.png" alt="icon facebook"></a>
-                 <a href="#" target="_blank"><img src="../img/insta.png" alt="icon instagram"></a>
-                 <a href="#" target="_blank"><img src="../img/wpp.png" alt="icon whatsapp"></a>
+                 <a href="{{this.facebook}}" target="_blank"><img src="../img/face.png" alt="icon facebook"></a>
+                 <a href="{{this.instagram}}" target="_blank"><img src="../img/insta.png" alt="icon instagram"></a>
+                 <a href="https://wa.me/+55{{this.whatsapp}}" target="_blank"><img src="../img/wpp.png" alt="icon whatsapp"></a>
             </div>
+            {{/each}}
 
             <header>
                 <img src="../img/logo.png" alt="Logo Funilaria Ribeiro">
@@ -64,8 +70,10 @@
                   <div class="_division-carousel"></div>
 
                   <p>Instalação, manutenção e reparo de calhas e algerosas para sua residência. Solicite um orçamento.</p>
-
-                  <button><img src="img/wpp.png"> WHATSAPP</button>
+                 
+                  {{#each infos}}
+                  <button onclick="window.location.href='https://wa.me/+55{{this.whatsapp}}'"><img src="img/wpp.png"> WHATSAPP</button>
+                  {{/each}}
               </div>
 
               <div class="_content2-carousel d-none">
@@ -89,7 +97,7 @@
 
 
 
-
+{{#each infos}}
 <!--SOBRE NÓS-->
 <section id="sobre-nos">
 
@@ -99,13 +107,13 @@
       <div class="container">
            <div class="row">
                 <div data-aos="fade-up" data-aos-once="true" class="order-2 order-lg-1 col-12 col-lg-6 d-flex justify-content-center align-items-center">
-                    <img class="_img-git-sobre-nos" src="img/gif1.gif">
+                    <img class="_img-git-sobre-nos" src="img/{{this.img_sobre_nos}}">
                 </div>
 
                 <div data-aos="fade-up" data-aos-once="true" class="order-1 order-lg-2 col-12 col-lg-6 _container-txt-sobre-nos">
                      <h1>FUNILARIA RIBEIRO</h1>
 
-                     <p>A Funilaria Ribeiro é uma empresa especializada na colocação de calhas e algerosas, com mais de 20 anos de experiência no mercado. Com técnicas aperfeiçoadas e profissionais qualificados, a empresa oferece serviços de alta qualidade e segurança, visando sempre o melhor resultado para seus clientes.</p>
+                     <p>{{this.txt_sobre_nos}}</p>
 
                      <button onclick="window.location.href='#galeria'">SAIBA MAIS</button>
                 </div>
@@ -113,10 +121,12 @@
       </div>
 </section>
 <!--SOBRE NÓS-->
+{{/each}}
 
 
 
-
+{{#if servicos}}
+{{#each servicos}}
 <!--SERVIÇOS-->
 <section id="servicos">
 
@@ -128,47 +138,21 @@
 
             <div data-aos="fade-up" data-aos-once="true" class="col-12 col-lg-4 px-3 text-center mb-4">
                 <div class="_container-exibir-servicos">
-                     <div><img src="img/fundo.jpeg"></div>
+                     <div><img src="img/{{this.img_servicos}}"></div>
 
-                     <h3>CALHAS</h3>
+                     <h3>{{this.title_servicos}}</h3>
 
-                     <p>Interna e Externa</p>
-
-                     <button>ORÇAMENTO</button>
+                     <p>{{this.sub_title_servicos}}</p>
+                     
+                     <button onclick="window.location.href='#formulario'">ORÇAMENTO</button>
                 </div>
             </div>
-
-
-            <div data-aos="fade-up" data-aos-once="true" class="col-12 col-lg-4 px-3 text-center mb-4">
-                <div class="_container-exibir-servicos">
-                     <div><img src="img/img2.png"></div>
-
-                     <h3>COLARINHOS</h3>
-
-                     <p>Churrasqueiras e Chaminés</p>
-
-                     <button>ORÇAMENTO</button>
-                </div>
-            </div>
-
-
-            <div data-aos="fade-up" data-aos-once="true" class="col-12 col-lg-4 px-3 text-center mb-4">
-                <div class="_container-exibir-servicos">
-                     <div><img src="img/alge.png"></div>
-
-                     <h3>ALGEROSA</h3>
-
-                     <p>Capeamento ou Embutida</p>
-
-                     <button>ORÇAMENTO</button>
-                </div>
-                </div>
-            </div>
-        </div>
 
     </div>
 </section>
 <!--SERVIÇOS-->
+{{/each}}
+{{/if}}
 
 
 
@@ -182,7 +166,8 @@
 
 
 
-
+{{#if galeria}}
+{{#each galeria}}
 <!--GALERIA-->
 <section id="galeria">
     <h1 data-aos="fade-up" data-aos-once="true" class="_galeria-title">GALERIA</h1>
@@ -190,23 +175,20 @@
 
     <div class="container mb-5">
         <div class="row _container-all-imgs">
-            <div data-aos="fade-up" data-aos-once="true" class="col-12 col-lg-4 p-2 mb-3 _container-galeria-fotos"><img src="img/gif1.gif"></div>
-            <div data-aos="fade-up" data-aos-once="true" class="col-12 col-lg-4 p-2 mb-3 _container-galeria-fotos"><img src="img/flex-img5.gif"></div>
-            <div data-aos="fade-up" data-aos-once="true" class="col-12 col-lg-4 p-2 mb-3 _container-galeria-fotos"><img src="img/flex-img6.gif"></div>
-            <div data-aos="fade-up" data-aos-once="true" class="col-12 col-lg-4 p-2 mb-3 _container-galeria-fotos"><img src="img/flex-img1.jpeg"></div>
-            <div data-aos="fade-up" data-aos-once="true" class="col-12 col-lg-4 p-2 mb-3 _container-galeria-fotos"><img src="img/flex-img3.jpeg"></div>
-            <div data-aos="fade-up" data-aos-once="true" class="col-12 col-lg-4 p-2 mb-3 _container-galeria-fotos"><img src="img/img2.png"></div>
+            <div data-aos="fade-up" data-aos-once="true" class="col-12 col-lg-4 p-2 mb-3 _container-galeria-fotos"><img src="img/{{this.imgs_name}}"></div>
         </div>
     </div>
 
     <button data-aos="fade-up" data-aos-once="true"><img src="img/wpp.png"> ORÇAMENTOS</button>
 </section>
 <!--GALERIA-->
+{{/each}}
+{{/if}}
 
 
 
 
-<!--FUNCRIONAMENTO-->
+<!--FUNCIONAMENTO-->
 <section id="funcionamento">
    <div class="container">
     <div class="row">
@@ -240,19 +222,21 @@
 
         <div data-aos="fade-up" data-aos-once="true" class="_container-funcionamento-blocos col-12 col-lg-4 text-center text-white">
             <h3 class="_title-funcionamento">CONTATOS:</h3>
-            
+       
+            {{#each infos}}
             <div class="_btn-sociais">
-                <a href="" target="_blank"><img src="img/insta.png"> INSTAGRAM</a>
-                <a href="" target="_blank"><img src="img/face.png"> FACEBOOK</a>
-                <a href="" target="_blank"><img src="img/wpp.png"> WHATSAPP</a>
-                <a href="" target="_blank"><img src="img/email.png"> EMAIL</a>
+                <a href="{{this.instagram}}" target="_blank"><img src="img/insta.png"> INSTAGRAM</a>
+                <a href="{{this.facebook}}" target="_blank"><img src="img/face.png"> FACEBOOK</a>
+                <a href="https://wa.me/+55{{this.whatsapp}}" target="_blank"><img src="img/wpp.png"> WHATSAPP</a>
+                <a href="mailto:{{this.email}}" target="_blank"><img src="img/email.png"> EMAIL</a>
             </div>
+            {{/each}}
         </div>
 
     </div>
    </div>
 </section>
-<!--FUNCRIONAMENTO-->
+<!--FUNCIONAMENTO-->
 
 
 
@@ -267,8 +251,10 @@
 
      <iframe data-aos="fade-up" data-aos-once="true" class="d-none d-lg-block" src="https://snapwidget.com/embed/1030395" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:765px; height:510px; margin-bottom:25px;"></iframe>
      <iframe data-aos="fade-up" data-aos-once="true" class="d-block d-lg-none" src="https://snapwidget.com/embed/1030393" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:315px; height:315px; margin-bottom:25px;"></iframe>
-
-     <button data-aos="fade-up" data-aos-once="true">@FUNILARIA_RIBEIRO2022 <img src="img/insta.png"></button>
+     
+     {{#each infos}}
+     <button onclick="window.location.href='{{this.instagram}}'" data-aos="fade-up" data-aos-once="true">@FUNILARIA_RIBEIRO2022 <img src="img/insta.png"></button>
+     {{/each}}
 
 </section>
 <!--INSTAGRAM-->
@@ -283,7 +269,7 @@
     <h1 data-aos="fade-up" data-aos-once="true" class="_title-formulario">CONTATO</h1>
     <h6 data-aos="fade-up" data-aos-once="true" class="_subtitle-formulario">Preencha seus dados e entraremos em contato!</h6>
 
-    <form action="">
+    <form action="/enviarEmail" method="POST">
         <input data-aos="fade-up" data-aos-once="true" type="text" placeholder="NOME*" required name="nome">
         <input data-aos="fade-up" data-aos-once="true" type="email" placeholder="EMAIL*" required name="email">
         <input data-aos="fade-up" data-aos-once="true" id="tel-form" type="tel" placeholder="WHATSAPP*" required name="whatsapp" maxlength="15" inputmode="tel">
