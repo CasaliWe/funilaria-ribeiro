@@ -193,6 +193,8 @@ module.exports = class PostsControllers {
 
 
         static async enviarEmail(req,res){
+
+            /*
             const email = req.body.email 
             const nome = req.body.nome
             const whatsapp = req.body.whatsapp
@@ -241,6 +243,7 @@ module.exports = class PostsControllers {
                      </div>
                   `
             })
+            */
 
             res.redirect('/')
         }
