@@ -64,6 +64,6 @@ app.use('/', funilariaRoutes)
 
 
 conn.sync().then(()=>{
-    app.listen(3000)
+    app.listen(3001)
 }).catch((err) => console.log(err))
 //Usa-se sync({force:true}) para forçar o reset e recriação das tables;
