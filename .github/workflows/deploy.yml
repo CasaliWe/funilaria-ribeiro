@@ -1,0 +1,28 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+      - preview
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install sshpass
+        run: sudo apt-get install sshpass
+
+      - name: Deploy to VPS
+        run: |
+          if [ $GITHUB_REF == 'refs/heads/main' ]; then
+            # Para a branch main, faz o pull na pasta principal
+            sshpass -p "${{ secrets.VPS_PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_IP }} "cd /home/funilariaribeiro/htdocs/funilariaribeiro.com.br/ && git pull origin main"
+          elif [ $GITHUB_REF == 'refs/heads/preview' ]; then
+            # Para a branch preview, faz o pull na pasta preview
+            sshpass -p "${{ secrets.VPS_PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_IP }} "cd /home/funilariaribeiro/htdocs/funilariaribeiro.com.br/preview/ && git pull origin preview"
+          fi
